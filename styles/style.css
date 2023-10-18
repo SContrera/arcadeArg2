@@ -157,16 +157,16 @@ main {
 }
 
 
-/*vista tablet - arriba de 600px*/
+/*vista tablet - arriba de 400px*/
 
 @media screen and (min-width: 400px) {
 .grid-container {
 
         grid-template:
-            'navbar  header ' 50px
+            'navbar  header ' 60px
             'navbar   main  ' auto
-            'footer  footer' 40px /
-             80px      auto   ;
+            'footer  footer' 20px /
+             90px      auto   ;
 
     }
 
@@ -181,6 +181,7 @@ main {
 
 .flex-header {
         display: flex;
+        
     }
 
 
