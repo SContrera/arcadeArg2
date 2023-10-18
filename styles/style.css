@@ -159,7 +159,7 @@ main {
 
 /*vista tablet - arriba de 600px*/
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 400px) {
 .grid-container {
 
         grid-template:
