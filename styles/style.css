@@ -1,0 +1,313 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans&display=swap");
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background: url(../img/fondo.png) no-repeat fixed;
+    background-size: cover;
+    min-height: 100%;
+    font-family: "Public Sans", sans-serif;
+    font-size: 1.2rem;
+}
+
+.grid-container>section,
+main {
+    box-shadow: -1px 1px 7px 0px rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 10px;
+
+}
+
+.header {
+    grid-area: header;
+
+}
+
+.flex-header {
+    gap: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+}
+
+.flex-header>div>img {
+    height: 50px;
+    width: 50px;
+}
+
+.flex-header>div {
+    text-align: center;
+}
+
+
+
+.navbar {
+    grid-area: navbar;
+    background-color: rgb(0, 0, 0);
+    font-size: 1rem;
+    color: blueviolet;
+}
+
+.flex-container {
+    display: flex;
+    height: 100%;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+
+}
+
+.flex-container>div {
+
+    text-align: center;
+}
+
+
+/*------------------------ ESTILO DE NAVBAR----------------------*/
+.underlinea {
+    color: #64b5f6;
+    font-size: 1.1rem;
+    display: inline-block;
+    position: relative;
+
+}
+
+.underlinea:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1.5px;
+    bottom: 0;
+    left: 0;
+    background-color: #64b5f6;
+    transform-origin: bottom right;
+    transition: transform 0.6s ease-out;
+}
+
+.underlinea:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/*------------FIN ESTILO NAVBAR-----------------*/
+
+
+
+
+
+.main {
+    grid-area: main;
+    background-color: rgba(0, 0, 0, 0.38);
+    margin-top: 10px;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: rgb(0, 0, 0);
+    color: rgb(251, 255, 0);
+
+}
+
+.flex-footer {
+    background-color: black;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    justify-content: center;
+
+}
+
+.flex-footer>img {
+    height: 20px;
+
+}
+
+
+.grid-container {
+    display: grid;
+    
+    grid-template:
+        'navbar' 50px
+        'header' 60px
+        'main' auto
+        'footer' 30px;
+}
+
+
+/*vista tablet - arriba de 600px*/
+
+@media screen and (min-width: 600px) {
+.grid-container {
+
+        grid-template:
+            'navbar  header ' 50px
+            'navbar   main  ' auto
+            'footer  footer' 40px /
+             80px      auto   ;
+
+    }
+
+
+.flex-container {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-between;
+        align-content: center;
+
+    }
+
+.flex-header {
+        display: flex;
+    }
+
+
+}
+
+
+@media screen and (min-width: 900px) {
+    .grid-container {
+        grid-template:
+            'navbar     navbar      navbar' 70px
+            'header     header      header' 100px
+            'main       main        main'   auto
+            'footer     footer      footer' 10px /
+              15%        auto        10%;
+    }
+
+    body {
+        background: url(../img/fondo.png) repeat fixed;
+        background-size: cover;
+        min-height: 100%;
+        font-family: "Public Sans", sans-serif;
+        font-size: 1.2rem;
+    }
+
+    .grid-container>section,
+main {
+    box-shadow: -1px 1px 7px 0px rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 10px;
+
+}
+
+.header {
+    grid-area: header;
+}
+
+.flex-header {
+
+    display: flex;
+    height: 100%;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+}
+
+.flex-header>div>img {
+    height: 50px;
+    width: 50px;
+}
+
+.flex-header>div {
+    text-align: center;
+}
+
+
+
+.navbar {
+    grid-area: navbar;
+    background-color: rgb(0, 0, 0);
+    font-size: 1rem;
+    color: blueviolet;
+}
+
+.flex-container {
+    display: flex;
+    height: 100%;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+
+}
+
+.flex-container>div {
+
+    text-align: center;
+}
+
+
+/*------------------------ ESTILO DE NAVBAR----------------------*/
+.underlinea {
+    color: #64b5f6;
+    font-size: 1.1rem;
+    display: inline-block;
+    position: relative;
+
+}
+
+.underlinea:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1.5px;
+    bottom: 0;
+    left: 0;
+    background-color: #64b5f6;
+    transform-origin: bottom right;
+    transition: transform 0.6s ease-out;
+}
+
+.underlinea:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/*------------FIN ESTILO NAVBAR-----------------*/
+
+
+
+.main {
+    grid-area: main;
+    background-color: rgba(0, 0, 0, 0.38);
+}
+
+.footer {
+    grid-area: footer;
+    background-color: rgb(0, 0, 0);
+    color: rgb(251, 255, 0);
+    height: 100%;
+
+
+}
+
+.flex-footer {
+    background-color: black;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    justify-content: center;
+
+}
+
+.flex-footer>img {
+    height: 50px;
+
+}
+}
