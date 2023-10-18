@@ -63,7 +63,7 @@ main {
 .flex-container {
     display: flex;
     height: 100%;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
     justify-content: space-around;
     align-content: center;
     align-items: center;
@@ -75,6 +75,10 @@ main {
     text-align: center;
 }
 
+.flex-header{
+    display: flex;
+    flex-flow: row wrap;
+}
 
 /*------------------------ ESTILO DE NAVBAR----------------------*/
 .underlinea {
@@ -107,13 +111,17 @@ main {
 
 
 
-
-
 .main {
     grid-area: main;
     background-color: rgba(0, 0, 0, 0.38);
     margin-top: 10px;
 }
+
+.flex-main{
+    display:flex;
+    flex-flow: column wrap;
+}
+
 
 .footer {
     grid-area: footer;
@@ -141,7 +149,7 @@ main {
     display: grid;
     
     grid-template:
-        'navbar' 50px
+        'navbar' 200px
         'header' 60px
         'main' auto
         'footer' 30px;
